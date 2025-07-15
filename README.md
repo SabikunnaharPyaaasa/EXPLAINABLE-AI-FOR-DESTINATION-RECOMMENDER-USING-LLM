@@ -29,3 +29,13 @@ This project is a multimodal AI agent that recommends travel destinations based 
    !pip install torch torchvision faiss-cpu transformers sentencepiece \
                  pandas numpy opencv-python Pillow spacy requests tqdm
    !python -m spacy download en_core_web_sm
+
+
+## 📗 Upload required files (from models/ and data/)
+   1. sam_vit_b.pth
+   2. unsplash_clip.index
+   3. unsplash_clip_metadata.csv
+   4. Run the notebook cells
+   5. Load models (BLIP, CLIP, SAM)
+   6. Define helper functions
+   7. Run the run_agent() function on test tasks or GAIA evaluations
