@@ -39,3 +39,8 @@ This project is a multimodal AI agent that recommends travel destinations based 
    5. Load models (BLIP, CLIP, SAM)
    6. Define helper functions
    7. Run the run_agent() function on test tasks or GAIA evaluations
+
+## 📗Demo Video:
+
+https://github.com/user-attachments/assets/058dfa1f-e587-429f-a61b-2518810b774f
+
