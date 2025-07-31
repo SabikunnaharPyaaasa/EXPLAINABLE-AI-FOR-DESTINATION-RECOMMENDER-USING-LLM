@@ -5,6 +5,8 @@ This project is a multimodal AI agent that recommends travel destinations based 
 ✅ Designed and tested in **Google Colab**  
 ✅ Compatible with the **GAIA Benchmark** format
 
+This project is designed to run on **Google Colab** and uses the **Hugging Face Inference API** to process input. It also provides a simple **Streamlit interface** for interaction via a localhost tunnel.
+
 ---
 
 ## 🚀 Features
@@ -19,26 +21,50 @@ This project is a multimodal AI agent that recommends travel destinations based 
 
 ## 📗 How to Use
 
-1. **Open the Colab notebook**  
-   Upload or open `Copy_of_Merged.ipynb` in [Google Colab](https://colab.research.google.com/).
+### **Download and Open the Colab notebook**
 
-2. **Install required packages (see below)**  
-   At the top of the notebook, run the pip install cells or manually install:
+   Make sure you are using **Google Colab** to run this notebook. 
+   Download the Main/EXPLAINABLE_AI_FOR_DESTINATION_RECOMMENDER_USING_LLM.ipynb file and upload or open it in [Google Colab](https://colab.research.google.com/).
 
-   ```python
-   !pip install torch torchvision faiss-cpu transformers sentencepiece \
-                 pandas numpy opencv-python Pillow spacy requests tqdm
-   !python -m spacy download en_core_web_sm
+### **Install required packages (see below)**  
 
+   At the top of the notebook, run the pip install cells.
 
-## 📗 Upload required files (from models/ and data/)
-   1. sam_vit_b.pth
-   2. unsplash_clip.index
-   3. unsplash_clip_metadata.csv
-   4. Run the notebook cells
-   5. Load models (BLIP, CLIP, SAM)
-   6. Define helper functions
-   7. Run the run_agent() function on test tasks or GAIA evaluations
+### **Hugging Face API Token**
+
+We use the **Hugging Face Inference API**, so you need to generate a personal access token:
+
+1. Go to: https://huggingface.co/settings/tokens
+2. Click on **New token** → Select **Write** access.
+3. Copy the token.
+
+Now in the notebook:
+- Search for the keyword `api_key`.
+- Replace the placeholder string with your token:
+  ```python
+  api_key = "[YOUR_HUGGING_FACE_TOKEN]"
+  
+### **Download and Upload required files**
+Download these two files from /Data folder
+   1. unsplash_clip.index
+   2. unsplash_clip_metadata.csv
+      
+Click the folder icon on the left sidebar in Colab and upload these two files.
+
+### Run All Cells
+Go to the "Runtime" menu → Click "Run all" to execute every cell in sequence.
+
+### Launching the Streamlit App
+✅ Step 1:
+Run the second-to-last cell – it will generate an IP address. Copy it.
+
+✅ Step 2:
+Run the last cell – this will start the Streamlit app and give you a localhost link like:
+
+https://sad-seas-sin.loca.lt
+
+🔐 Paste the IP Address
+When you open the link, it will ask for a Tunnel password — paste the IP address you got from the previous cell.
 
 ## 📗Demo Video:
 
