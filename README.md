@@ -15,7 +15,6 @@ This project is designed to run on **Google Colab** and uses the **Hugging Face 
 - Tag extraction using **CLIP** + custom logic
 - Semantic image search with **FAISS**
 - Conversational destination generation via **LLM**
-- GAIA-compatible `run_agent(task_input)` interface
 
 ---
 
